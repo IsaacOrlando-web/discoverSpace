@@ -247,6 +247,22 @@ footer p {
     letter-spacing:0.5px;
 }
 
+.enter-date{
+    background-color: black;
+    padding: 10px;
+    & input {
+        border-radius: 2px;
+        border: none;
+        padding: 5px;
+    }
+    & button{
+        background-color: var(--secundary-color);
+        border: none;
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
 
 
 @media only screen and (max-width: 829px) {
