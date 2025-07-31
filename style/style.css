@@ -263,6 +263,36 @@ footer p {
     }
 }
 
+.mars-card{
+    background-color: var(--background-color);
+    margin: auto;
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mars-card-info{
+    text-align:start;
+    padding: 20px;
+}
+
+.mars-card-info li{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.mars-card-pic{
+    width: 200px;
+}
+.mars-card-pic img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 
 
 @media only screen and (max-width: 829px) {
