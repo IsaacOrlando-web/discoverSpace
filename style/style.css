@@ -8,6 +8,10 @@
     --quotes-buttons: Space Mono;
 }
 
+#myButton{
+    display: none;
+}
+
 nav {
     background: none;
     height: auto;
@@ -241,4 +245,87 @@ footer p {
     margin: 0.3rem 0;
     opacity: 0.85;
     letter-spacing:0.5px;
+}
+
+
+
+@media only screen and (max-width: 829px) {
+    nav {
+        position: fixed; /* Cambiado de absolute a fixed */
+        top: 6rem; /* Altura del header */
+        left: 0;
+        right: auto;
+        width: 100%;
+        background-color: var(--main-color);
+        display: block;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+    }
+
+    nav li {
+        width: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 0;
+    }
+
+    nav a {
+        color: white;
+        padding: 1rem 2rem;
+        text-align: left;
+    }
+
+    nav a:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    /* Estado abierto */
+    nav.open {
+        max-height: 500px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Header ajustado */
+    header {
+        height: 6rem;
+        position: relative;
+    }
+
+    /* Botón hamburguesa */
+    #myButton {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+        position: absolute;
+        right: 20px;
+    }
+
+    .post-container{
+        width: 80%;
+        & h1{
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1073px) {
+    .lastTenPosts {
+        grid-template-columns: 1fr;
+    }
+    .posts-container {
+        width: 60%;
+    }
 }
