@@ -1,4 +1,10 @@
 const API_KEY = 'kaQ2PR2nec5HYyHfc7brnSs3N4A62SBWD9Kawhyn';
+const dataSol = document.getElementById('data-sol');
+const dataAverageTemp = document.getElementById('data-av-temp');
+const dataMaxTemp = document.getElementById('data-max-temp');
+const dataMinTemp = document.getElementById('data-min-temp');
+const dataAtmospheric = document.getElementById('data-atmospheric');
+const dataWind = document.getElementById('data-wind');
 
 async function getMarsInfo(){
     try {
@@ -7,7 +13,7 @@ async function getMarsInfo(){
             throw new error('HTTP Error! status' + response.status);
         }
         const json =await response.json();
-        console.log(json);
+        //console.log(json);
         return json
         
     } catch (error) {
@@ -20,12 +26,19 @@ function showInfo(data) {
         const latestSol = data.sol_keys[data.sol_keys.length - 1]; // Último sol disponible
         const weatherData = data[latestSol];
 
-        console.log(`Data for sol (Martian day): ${latestSol}`);
-        console.log(`Average temperature: ${weatherData.AT?.av}°C`);
-        console.log(`Maximum temperature: ${weatherData.AT?.mx}°C`);
-        console.log(`Minimum temperature: ${weatherData.AT?.mn}°C`);
-        console.log(`Atmospheric pressure: ${weatherData.PRE?.av} Pa`);
-        console.log(`Wind ${weatherData.HWS?.av} m/s`);
+        dataSol.textContent = latestSol;
+        dataAverageTemp.textContent = weatherData.AT?.av;
+        dataMaxTemp.textContent = weatherData.AT?.mx;
+        dataMinTemp.textContent = weatherData.AT?.mn;
+        dataAtmospheric.textContent = weatherData.PRE?.av;
+        dataWind.textContent = weatherData.HWS?.av;
+
+        //console.log(`Data for sol (Martian day): ${latestSol}`);
+        //console.log(`Average temperature: ${weatherData.AT?.av}°C`);
+        //console.log(`Maximum temperature: ${weatherData.AT?.mx}°C`);
+        //console.log(`Minimum temperature: ${weatherData.AT?.mn}°C`);
+        //console.log(`Atmospheric pressure: ${weatherData.PRE?.av} Pa`);
+        //console.log(`Wind ${weatherData.HWS?.av} m/s`);
     } else {
         console.log("No hay datos disponibles actualmente.");
     }
