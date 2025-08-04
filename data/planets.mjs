@@ -14,7 +14,8 @@ export const planets = {
         "moons": 0,
         "rings": false,
         "atmosphere": ["oxygen", "sodium", "hydrogen"],
-        "fun_fact": "Smallest planet in our solar system"
+        "fun_fact": "Smallest planet in our solar system",
+        "image": "https://sos.noaa.gov/ftp_mirror/astronomy/mercury/colorized/media/thumbnail_big.jpg"
       },
       {
         "name": "Venus",
@@ -28,7 +29,8 @@ export const planets = {
         "moons": 0,
         "rings": false,
         "atmosphere": ["carbon dioxide", "nitrogen"],
-        "fun_fact": "Hottest planet with a runaway greenhouse effect"
+        "fun_fact": "Hottest planet with a runaway greenhouse effect",
+        "image": "https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2024/03/venus-mariner-10-pia23791-fig2.jpg?w=1096&h=1096&fit=clip&crop=faces%2Cfocalpoint"
       },
       {
         "name": "Earth",
@@ -42,7 +44,8 @@ export const planets = {
         "moons": 1,
         "rings": false,
         "atmosphere": ["nitrogen", "oxygen", "argon"],
-        "fun_fact": "Only known planet to support life"
+        "fun_fact": "Only known planet to support life",
+        "image": "https://cdn.britannica.com/25/160325-050-EB1C8FB7/image-instruments-Earth-satellite-NASA-Suomi-National-2012.jpg"
       },
       {
         "name": "Mars",
@@ -56,7 +59,8 @@ export const planets = {
         "moons": 2,
         "rings": false,
         "atmosphere": ["carbon dioxide", "nitrogen", "argon"],
-        "fun_fact": "Home to the largest volcano in the solar system (Olympus Mons)"
+        "fun_fact": "Home to the largest volcano in the solar system (Olympus Mons)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/1200px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
       },
       {
         "name": "Jupiter",
@@ -70,7 +74,8 @@ export const planets = {
         "moons": 95,
         "rings": true,
         "atmosphere": ["hydrogen", "helium"],
-        "fun_fact": "Largest planet with a storm (Great Red Spot) lasting centuries"
+        "fun_fact": "Largest planet with a storm (Great Red Spot) lasting centuries",
+        "image": "https://spaceplace.nasa.gov/all-about-jupiter/sp/jupiter_turbulent-atmosphere.sp.jpg"
       },
       {
         "name": "Saturn",
@@ -84,7 +89,8 @@ export const planets = {
         "moons": 146,
         "rings": true,
         "atmosphere": ["hydrogen", "helium"],
-        "fun_fact": "Has the most extensive ring system made of ice and rock"
+        "fun_fact": "Has the most extensive ring system made of ice and rock",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/stsci-h-p2043a-f-1592x1137-1595858283.png?crop=0.716xw:1.00xh;0.112xw,0&resize=640:*"
       },
       {
         "name": "Uranus",
@@ -98,7 +104,8 @@ export const planets = {
         "moons": 28,
         "rings": true,
         "atmosphere": ["hydrogen", "helium", "methane"],
-        "fun_fact": "Rotates on its side (98° axial tilt)"
+        "fun_fact": "Rotates on its side (98° axial tilt)",
+        "image": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/i/a/0/PIA01492-1.jpg?w=2188&h=2185&fit=clip&crop=faces%2Cfocalpoint"
       },
       {
         "name": "Neptune",
@@ -112,7 +119,8 @@ export const planets = {
         "moons": 16,
         "rings": true,
         "atmosphere": ["hydrogen", "helium", "methane"],
-        "fun_fact": "Has the strongest winds in the solar system (2,100 km/h)"
+        "fun_fact": "Has the strongest winds in the solar system (2,100 km/h)",
+        "image": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/p/i/a/0/PIA01492-1.jpg?w=2188&h=2185&fit=clip&crop=faces%2Cfocalpoint"
       },
       {
         "name": "Pluto",
@@ -126,7 +134,8 @@ export const planets = {
         "moons": 5,
         "rings": false,
         "atmosphere": ["nitrogen", "methane", "carbon monoxide"],
-        "fun_fact": "Heart-shaped glacier (Tombaugh Regio) larger than Texas"
+        "fun_fact": "Heart-shaped glacier (Tombaugh Regio) larger than Texas",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/960px-Pluto_in_True_Color_-_High-Res.jpg"
       }
     ],
     "metadata": {
