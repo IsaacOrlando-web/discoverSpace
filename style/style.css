@@ -336,6 +336,26 @@ footer p {
     }
 }
 
+.game-area {
+    margin: auto;
+    width: 50rem;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    position: relative;
+    background-image: url('../images/game/solarsystem.jpeg');
+    background-repeat: no-repeat;
+}
+
+#ship {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
 @media only screen and (max-width: 829px) {
 
     nav {
