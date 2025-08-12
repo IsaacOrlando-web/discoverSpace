@@ -328,6 +328,7 @@ footer p {
 }
 
 @media only screen and (min-width: 800px){
+
     .solar-system-planets{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -499,7 +500,7 @@ footer p {
     height: 100px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     right: 42%;
     top: 62%;
@@ -510,7 +511,7 @@ footer p {
     height: 50px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 0, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     left: 29%;
     top: 76%;
@@ -521,7 +522,7 @@ footer p {
     height: 180px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     left: 0;
     top: 75%;
@@ -532,7 +533,7 @@ footer p {
     height: 90px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     left: 27%;
     top: 50%;
@@ -543,7 +544,7 @@ footer p {
     height: 90px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     left: 28%;
     top: 23%;
@@ -554,7 +555,7 @@ footer p {
     height: 125px;
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     right: 34%;
     top: 34%;
@@ -564,7 +565,7 @@ footer p {
     width: 120px;
     height: 100px;
     position: absolute;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     right: 42%;
     top: 7%;
@@ -574,7 +575,7 @@ footer p {
     width: 95px;
     height: 95px;
     position: absolute;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     right: 10%;
     top: 30%;
@@ -584,13 +585,104 @@ footer p {
     width: 90px;
     height: 85px;
     position: absolute;
-    background-color: rgba(255, 255, 0, 0);
+    background-color: rgba(255, 255, 0, 0.349);
     position: absolute;
     right: 11%;
     top: 8%;
 }
 
 @media only screen and (max-width: 829px) {
+
+    .planet-earth{
+        width: 25px;
+        height: 30px;
+
+        right: 42%;
+        top: 60%;
+    }
+
+    .planet-mercury{
+        width: 20px;
+        height: 20px;
+        
+        left: 35%;
+        top: 73%;
+    }
+
+    .sun{
+        width: 50px;
+        height: 60px;
+        
+        left: 10%;
+        top: 75%;
+    }
+
+    .planet-venus{
+        width: 20px;
+        height: 20px;
+
+        left: 36%;
+        top: 50%;
+    }
+
+    .planet-mars{
+        width: 21px;
+        height: 20px;
+        
+        left: 37%;
+        top: 24%;
+    }
+
+    .planet-jupiter{
+        width: 35px;
+        height: 35px;
+        right: 34%;
+        top: 34%;
+    }
+
+    .planet-saturn{
+        width: 30px;
+        height: 30px;
+        right: 42%;
+        top: 7%;
+    }
+
+    .planet-uranus{
+        width: 30px;
+        height: 29px;
+        right: 15%;
+        top: 30%;
+    }
+
+    .planet-neptune{
+        width: 25px;
+        height: 20px;
+        right: 15.5%;
+        top: 9%;
+    }
+
+    #ship img{
+        width: 20px;
+        height: 20px;
+    }
+
+    #ship {
+        width: 20px;
+        height: 20px;
+    }
+
+    .game-area{
+        margin: auto;
+        width: 20rem;
+        height: 30vh;
+        background-color: #000;
+        display: flex;
+        position: relative;
+        background-image: url('../images/game/solarsystem.jpeg');
+        background-repeat: no-repeat;
+        background-size: contain;      /* Ajusta la imagen para que se vea completa */
+        background-position: center;
+    }
 
     nav {
         position: fixed; /* Cambiado de absolute a fixed */
