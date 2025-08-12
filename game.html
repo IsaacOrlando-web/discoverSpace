@@ -6,7 +6,7 @@
     <title>DiscoverSpace🪐About Mars</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" type="image/x-icon" href="images/icon/icon.svg">
-    <script src="js/game.js" defer></script>
+    <script src="js/game.js" type="module" defer></script>
     <script src="js/menu.js" defer></script>
 </head>
 <body>
@@ -32,8 +32,39 @@
         </div>
         <div id="game-area" class="game-area">
             <div id="ship"><img src="images/game/ship.webp" alt="SpaceShip" width="70"></div>
+            <div id="planet-earth" class="planet-earth"></div>
+            <div id="planet-mercury" class="planet-mercury"></div>
+            <div id="sun" class="sun"></div>
+            <div id="planet-venus" class="planet-venus"></div>
+            <div id="planet-mars" class="planet-mars"></div>
+            <div id="planet-jupiter" class="planet-jupiter"></div>
+            <div id="planet-saturn" class="planet-saturn"></div>
+            <div id="planet-uranus" class="planet-uranus"></div>
+            <div id="planet-neptune" class="planet-neptune"></div>
         </div>
-        
+
+        <!--Dialog for the fun Fact-->
+        <dialog id="fun-fact-dialog" class="fun-fact-dialog">
+            <h2>Fun Fact: <span id="planet-name"></span></h2>
+            <img src="" alt="" width="100" height="100" id="fun-fact-image" class="fun-fact-image" loading="lazy">
+            <p id="fun-fact-text"></p>
+            <button autofocus id="next-dialog-btn">Next</button>
+        </dialog>
+
+        <!--Dialog for the questions-->
+        <dialog id="question-dialog" class="question-dialog">
+            <h2 id="question" class="question"></h2>
+            <input type="radio" id="option1" value="example" name="question-options">
+            <label for="option1" id="option1-label">Example</label>
+
+            <input type="radio" id="option2" value="example2" name="question-options">
+            <label for="option2" id="option2-label">Example</label>
+
+            <input type="radio" id="option3" value="example3" name="question-options">
+            <label for="option3" id="option3-label">Example</label> 
+
+            <button autofocus id="close-dialog-btn">Done</button>
+        </dialog>
     </main>
 </body>
 </html>

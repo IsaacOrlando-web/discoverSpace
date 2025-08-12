@@ -347,6 +347,144 @@ footer p {
     background-repeat: no-repeat;
 }
 
+.rotateUp {
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+.rotateDown {
+    transform: rotate(180deg);
+    transition: transform 0.2s;
+}
+.rotateLeft {
+    transform: rotate(-90deg);
+    transition: transform 0.2s;
+}
+.rotateRight {
+    transform: rotate(90deg);
+    transition: transform 0.2s;
+}
+
+.question-dialog {
+    background: linear-gradient(135deg, #2A4759 0%, #F79B72 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    padding: 2rem 1.5rem;
+    color: #fff;
+    font-family: var(--quotes-buttons), 'Space Mono', monospace;
+    max-width: 400px;
+    margin: 2rem auto;
+    border: 2px solid #fff;
+    animation: fadeIn 0.7s ease;
+}
+
+.question-dialog h2 {
+    font-family: var(--titles-headlines), 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFE066;
+    text-shadow: 1px 2px 8px #2A4759;
+}
+.question-dialog label {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    gap: 0.7rem; /* Espacio entre radio y texto */
+}
+
+.question-dialog input[type="radio"] {
+    margin-right: 0;
+    accent-color: #F79B72;
+}
+
+.question-dialog .dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.question-dialog button {
+    background: #FFE066;
+    color: #2A4759;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+    font-family: var(--quotes-buttons), 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s;
+}
+
+.question-dialog button:hover {
+    background: #F79B72;
+    color: #fff;
+}
+
+.fun-fact-dialog {
+    background: linear-gradient(135deg, #2A4759 0%, #F79B72 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    padding: 2rem 1.5rem;
+    color: #fff;
+    font-family: var(--quotes-buttons), 'Space Mono', monospace;
+    max-width: 400px;
+    margin: 2rem auto;
+    border: 2px solid #fff;
+    animation: fadeIn 0.7s ease;
+    text-align: center;
+}
+
+.fun-fact-dialog h2 {
+    font-family: var(--titles-headlines), 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FFE066;
+    text-shadow: 1px 2px 8px #2A4759;
+}
+
+.fun-fact-dialog img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin-bottom: 1rem;
+}
+
+.fun-fact-dialog p {
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
+    text-shadow: 0 1px 4px #2A4759;
+}
+
+.fun-fact-dialog button {
+    background: #FFE066;
+    color: #2A4759;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7rem 1.5rem;
+    font-family: var(--quotes-buttons), 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1rem;
+}
+
+.fun-fact-dialog button:hover {
+    background: #F79B72;
+    color: #fff;
+}
+
 #ship {
     width: 70px;
     height: 70px;
@@ -354,6 +492,102 @@ footer p {
     justify-content: center;
     align-items: center;
     position: absolute;
+}
+
+.planet-earth{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    right: 42%;
+    top: 62%;
+}
+
+.planet-mercury{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    left: 29%;
+    top: 76%;
+}
+
+.sun{
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 75%;
+}
+
+.planet-venus{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    left: 27%;
+    top: 50%;
+}
+
+.planet-mars{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    left: 28%;
+    top: 23%;
+}
+
+.planet-jupiter{
+    width: 120px;
+    height: 125px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    right: 34%;
+    top: 34%;
+}
+
+.planet-saturn{
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    right: 42%;
+    top: 7%;
+}
+
+.planet-uranus{
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.planet-neptune{
+    width: 90px;
+    height: 85px;
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0);
+    position: absolute;
+    right: 11%;
+    top: 8%;
 }
 
 @media only screen and (max-width: 829px) {
