@@ -11,6 +11,13 @@ const planetSaturn = document.getElementById('planet-saturn');
 const planetUranus = document.getElementById('planet-uranus');
 const planetNeptune = document.getElementById('planet-neptune');
 
+//control Buttons
+const upBtn = document.getElementById('up');
+const downBtn = document.getElementById('down');
+const leftBtn = document.getElementById('left');
+const rightBtn = document.getElementById('right');
+
+
 const scoreDisplay = document.getElementById('points');
 let points = 0;
 scoreDisplay.textContent = points;
@@ -80,28 +87,31 @@ function setRotation(direction) {
 
 document.addEventListener('keydown', event => {
     if (event.key.startsWith("Arrow")) {
-        
-        switch (event.key) {
-            case "ArrowUp":
-                if(y > 0) y -= moveAmount;
-                setRotation('rotateUp');
-                break;
-            case "ArrowDown":
-                if(y < 520) y += moveAmount;
-                setRotation('rotateDown');
-                break;
-            case "ArrowLeft":
-                if(x >= -10) x -= moveAmount;
-                setRotation('rotateLeft');
-                break;
-            case "ArrowRight":
-                if(x <= 740) x += moveAmount;
-                setRotation('rotateRight');
-                break;
-        }
-            console.log(`x: ${x}, y: ${y}`);
+        moveShip(event.key);
+    }
+});
 
-            myBox.style.top = `${y}px`;
+function moveShip(direction) { 
+    switch (direction) {
+        case "ArrowUp":
+            if (y > 0) y -= moveAmount;
+            setRotation('rotateUp');
+            break;
+        case "ArrowDown":
+            if (y < 520) y += moveAmount;
+            setRotation('rotateDown');
+            break;
+        case "ArrowLeft":
+            if (x >= -10) x -= moveAmount;
+            setRotation('rotateLeft');
+            break;
+        case "ArrowRight":
+            if (x <= 740) x += moveAmount;
+            setRotation('rotateRight');
+            break;
+    }
+
+    myBox.style.top = `${y}px`;
             myBox.style.left = `${x}px`;
 
             //If there is a collision on planet Earth
@@ -458,7 +468,9 @@ document.addEventListener('keydown', event => {
                     answerDialog.showModal();
                 });
             }
-        }
-        
-    
-});
+}
+
+upBtn.addEventListener('mousedown', () => moveShip("ArrowUp"));
+downBtn.addEventListener('mousedown', () => moveShip("ArrowDown"));
+leftBtn.addEventListener('mousedown', () => moveShip("ArrowLeft"));
+rightBtn.addEventListener('mousedown', () => moveShip("ArrowRight"));
