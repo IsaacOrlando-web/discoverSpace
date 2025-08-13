@@ -591,6 +591,12 @@ footer p {
     top: 8%;
 }
 
+@media only screen and (min-width: 830px) {
+    .control-container {
+        display: none !important;
+    }
+}
+
 @media only screen and (max-width: 829px) {
 
     .planet-earth{
@@ -670,6 +676,37 @@ footer p {
         width: 20px;
         height: 20px;
     }
+
+.arrow-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.arrow-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.control-button {
+    width: 48px;
+    height: 48px;
+    background: var(--main-color);
+    border: 2px solid var(--secundary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.control-button:active,
+.control-button:hover {
+    background: var(--secundary-color);
+}
 
     .game-area{
         margin: auto;
