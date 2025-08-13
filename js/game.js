@@ -143,7 +143,7 @@ function moveShip(direction) {
 
                     let correctId = "option1"; // Update this value for each question
                     if (selected.id === correctId) {
-                        points += 2;
+                        
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Earth is indeed the only planet with liquid water on its surface.";
                         excuseText.textContent = "This unique feature supports a diverse range of life forms.";
@@ -184,7 +184,7 @@ function moveShip(direction) {
                 
                     let correctId = "option3";
                     if (selected.id === correctId) {
-                        points += 2;
+                        
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Mercury has the largest temperature variations between day and night.";
                         excuseText.textContent = "Its thin atmosphere can't retain heat, causing extreme temperature swings.";
@@ -225,7 +225,7 @@ function moveShip(direction) {
                 
                     let correctId = "option2";
                     if (selected.id === correctId) {
-                        points += 2;
+                       
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! The Sun is primarily made of hydrogen and helium.";
                         excuseText.textContent = "These elements fuel the Sun's nuclear fusion reactions.";
@@ -264,7 +264,7 @@ function moveShip(direction) {
                 
                     let correctId = "option1";
                     if (selected.id === correctId) {
-                        points += 2;
+                        
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Venus is called Earth's 'sister planet' because of its similar size and mass.";
                         excuseText.textContent = "Despite similarities, Venus has extreme conditions.";
@@ -302,7 +302,7 @@ function moveShip(direction) {
                 
                     let correctId = "option1";
                     if (selected.id === correctId) {
-                        points += 2;
+                    
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Mars is called the 'Red Planet' due to iron oxide (rust) on its surface.";
                         excuseText.textContent = "Iron oxide gives Mars its reddish appearance.";
@@ -340,7 +340,7 @@ function moveShip(direction) {
                 
                     let correctId = "option2";
                     if (selected.id === correctId) {
-                        points += 2;
+                        
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Jupiter's Great Red Spot is a centuries-old giant storm.";
                         excuseText.textContent = "This storm has raged for hundreds of years.";
@@ -380,6 +380,7 @@ function moveShip(direction) {
                     let correctId = "option2";
                     if (selected.id === correctId) {
                         points += 2;
+                        console.log(`Points: ${points}`);
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Saturn's rings are made of countless orbiting ice and rock particles.";
                         excuseText.textContent = "The rings are not solid, but made of many small pieces.";
@@ -392,7 +393,6 @@ function moveShip(direction) {
             }
 
             if (detectarColision(myBox, planetUranus)) {
-                console.log("saturn");
                 funFactDialog.showModal();
                 funFactName.textContent = planets.solarSystem.planets[6].name;
                 funFactImage.src = `${planets.solarSystem.planets[6].image}`;
@@ -418,10 +418,10 @@ function moveShip(direction) {
                 
                     let correctId = "option1";
                     if (selected.id === correctId) {
-                        points += 2;
                         scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Uranus rotates on its side (nearly 90° tilt).";
                         excuseText.textContent = "This unique tilt makes Uranus stand out in our solar system.";
+                        points += 2;
                     } else {
                         answerText.textContent = "Incorrect. The correct answer is: It rotates on its side (nearly 90° tilt).";
                         excuseText.textContent = "Uranus's axis is tilted almost sideways.";
@@ -457,10 +457,9 @@ function moveShip(direction) {
                 
                     let correctId = "option1";
                     if (selected.id === correctId) {
-                        points += 2;
-                        scoreDisplay.textContent = points;
                         answerText.textContent = "Correct! Neptune is famous for the fastest winds in the solar system (over 2,000 km/h).";
                         excuseText.textContent = "Neptune's winds are the fastest recorded in our solar system.";
+                        sumPoints();
                     } else {
                         answerText.textContent = "Incorrect. The correct answer is: The fastest winds in the solar system (over 2,000 km/h).";
                         excuseText.textContent = "Neptune's extreme winds are a remarkable feature.";
@@ -468,6 +467,12 @@ function moveShip(direction) {
                     answerDialog.showModal();
                 });
             }
+}
+
+function sumPoints() {
+    points += 2;
+    console.log(`Points: ${points}`);
+    scoreDisplay.textContent = points;
 }
 
 upBtn.addEventListener('click', () => moveShip("ArrowUp"));
