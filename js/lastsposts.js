@@ -84,13 +84,15 @@ findBtn.addEventListener('click', () => {
     const date = document.getElementById('post-date').value;
     getPostByDate(date).then(post => displayPost(post));//Display that post
 
-    //Create a button to refresh the page
-    const refreshBtn = document.createElement('button')//Create an element button
-    refreshBtn.classList.add('refresh-btn');//Add a class to the button
-    refreshBtn.textContent = 'Refresh Page'; //Add text to the button.
-    dateContainer.append(refreshBtn);
-    refreshBtn.addEventListener('click', () => {
-        location.reload();
-    });
+    // Verifica si ya existe el botón
+    if (!dateContainer.querySelector('.refresh-btn')) {
+        const refreshBtn = document.createElement('button');
+        refreshBtn.classList.add('refresh-btn');
+        refreshBtn.textContent = 'Refresh Page';
+        dateContainer.append(refreshBtn);
+        refreshBtn.addEventListener('click', () => {
+            location.reload();
+        });
+    }
 });
 

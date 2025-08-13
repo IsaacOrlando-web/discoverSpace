@@ -49,9 +49,13 @@ nav a {
     display: block;
 }
 
-nav a:hover {
-    background-color: var(--secundary-color);
-    color: var(--main-color);
+nav li:hover {
+    background-color: var(--main-color);
+
+    & a{
+        color: var(--background-color);
+    }
+    
 }
 
 

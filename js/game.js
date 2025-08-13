@@ -56,6 +56,21 @@ const moveAmount = 10;
 let x = 0;
 let y = 0;
 
+
+function getLimits() {
+    const area = document.getElementById('game-area');
+    const ship = myBox;
+    const areaRect = area.getBoundingClientRect();
+    const shipRect = ship.getBoundingClientRect();
+
+    return {
+        minX: 0,
+        minY: 0,
+        maxX: areaRect.width - shipRect.width,
+        maxY: areaRect.height - shipRect.height
+    };
+}
+
 function detectarColision(div1,div2){
     const rect1 = div1.getBoundingClientRect();
     const rect2 = div2.getBoundingClientRect();
@@ -92,27 +107,31 @@ document.addEventListener('keydown', event => {
 });
 
 function moveShip(direction) { 
+    const limits = getLimits();
+
     switch (direction) {
         case "ArrowUp":
-            if (y > 0) y -= moveAmount;
+            if (y > limits.minY) y -= moveAmount;
             setRotation('rotateUp');
             break;
         case "ArrowDown":
-            if (y < 520) y += moveAmount;
+            if (y < limits.maxY) y += moveAmount;
             setRotation('rotateDown');
             break;
         case "ArrowLeft":
-            if (x >= -10) x -= moveAmount;
+            if (x > limits.minX) x -= moveAmount;
             setRotation('rotateLeft');
             break;
         case "ArrowRight":
-            if (x <= 740) x += moveAmount;
+            if (x < limits.maxX) x += moveAmount;
             setRotation('rotateRight');
             break;
     }
 
     myBox.style.top = `${y}px`;
-            myBox.style.left = `${x}px`;
+    myBox.style.left = `${x}px`;
+
+    console.log(`Ship position: (${x}, ${y})`);
 
             //If there is a collision on planet Earth
             if(detectarColision(myBox, planetEarsth)){
