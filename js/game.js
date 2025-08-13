@@ -470,7 +470,7 @@ function moveShip(direction) {
             }
 }
 
-upBtn.addEventListener('mousedown', () => moveShip("ArrowUp"));
-downBtn.addEventListener('mousedown', () => moveShip("ArrowDown"));
-leftBtn.addEventListener('mousedown', () => moveShip("ArrowLeft"));
-rightBtn.addEventListener('mousedown', () => moveShip("ArrowRight"));
+upBtn.addEventListener('click', () => moveShip("ArrowUp"));
+downBtn.addEventListener('click', () => moveShip("ArrowDown"));
+leftBtn.addEventListener('click', () => moveShip("ArrowLeft"));
+rightBtn.addEventListener('click', () => moveShip("ArrowRight"));
