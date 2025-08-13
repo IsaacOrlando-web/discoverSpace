@@ -616,18 +616,18 @@ footer p {
     }
 
     .sun{
-        width: 50px;
-        height: 60px;
-        
+        width: 45px;
+        height: 70px;
+        border-top-right-radius: 30px;
         left: 10%;
-        top: 75%;
+        top: 70%;
     }
 
     .planet-venus{
-        width: 20px;
-        height: 20px;
+        width: 26px;
+        height: 25px;
 
-        left: 36%;
+        left: 34%;
         top: 50%;
     }
 
@@ -635,7 +635,7 @@ footer p {
         width: 21px;
         height: 20px;
         
-        left: 37%;
+        left: 35%;
         top: 24%;
     }
 
@@ -649,21 +649,21 @@ footer p {
     .planet-saturn{
         width: 30px;
         height: 30px;
-        right: 42%;
+        right: 39.9%;
         top: 7%;
     }
 
     .planet-uranus{
-        width: 30px;
+        width: 35px;
         height: 29px;
-        right: 15%;
+        right: 10%;
         top: 30%;
     }
 
     .planet-neptune{
         width: 25px;
         height: 20px;
-        right: 15.5%;
+        right: 12%;
         top: 9%;
     }
 
